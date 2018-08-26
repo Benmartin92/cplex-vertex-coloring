@@ -4,16 +4,10 @@
  * Creation Date: 2018 aug. 26 at 22:40:35
  *********************************************/
 
- range numNodes = 1..4;
- range numColors = numNodes;
+range numNodes = 1..5;
+range numColors = 1..10;
 
- int adjMatrix[numNodes][numNodes] =
-    [
-    [0, 1, 1, 0],
-    [1, 0, 1, 0],
-    [1, 1, 0, 1],
-    [0, 0, 1, 0]
-    ];
+int adjMatrix[numNodes][numNodes] = ...;
 
 dvar int+ colorUsed[numColors];
 dvar int+ colorUsedAtNode[numNodes][numColors];
@@ -38,6 +32,10 @@ subject to {
         }
 }
 
- execute DISPLAY {
-   writeln("Test: ", numNodes, "\n");
+execute DISPLAY {
+ 	var chromaticNumber = 0;
+ 	for (var color in colorUsed)
+ 		if (colorUsed[color] > 0)
+ 			chromaticNumber += 1;  
+   	writeln("Chromatic number: ", chromaticNumber);
 }

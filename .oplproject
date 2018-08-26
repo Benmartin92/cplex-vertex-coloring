@@ -7,6 +7,30 @@
 			<ref name="graph.dat" type="data">
 			</ref>
 		</config>
+		<config default="false" name="Power2" category="opl">
+			<ref name="vertex-coloring.mod" type="model">
+			</ref>
+			<ref name="graph-power-2.dat" type="data">
+			</ref>
+		</config>
+		<config default="false" name="bipartite" category="opl">
+			<ref name="vertex-coloring.mod" type="model">
+			</ref>
+			<ref name="bipartite-graph.dat" type="data">
+			</ref>
+		</config>
+		<config default="false" name="k5" category="opl">
+			<ref name="vertex-coloring.mod" type="model">
+			</ref>
+			<ref name="k5graph.dat" type="data">
+			</ref>
+		</config>
+		<config default="false" name="stable-set" category="opl">
+			<ref name="stable-set.mod" type="model">
+			</ref>
+			<ref name="k5graph.dat" type="data">
+			</ref>
+		</config>
 	</configs>
 	
 </project>
